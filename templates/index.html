@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dojo Survey Index</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <div class="index">
+    <form action="/result" method="POST">
+      <label for="name">Your name: </label>
+      <input type="text" id="name" name="name" class="form-control">
+      <br/>
+      <p class="d-inline-block">Dojo Location: </p>
+      <select name="dojo" id="dojo" class="form-control">
+        <option value="San Jose">San Jose</option>
+        <option value="Seattle">Seattle</option>
+        <option value="Los Angeles">Los Angeles</option>
+        <option value="Dallas">Dallas</option>
+        <option value="Arlington">Arlington</option>
+        <option value="Chicago">Chicago</option>
+        <option value="Tulsa">Tulsa</option>
+        <option value="Oakland">Oakland</option>
+        <option value="Boise">Boise</option>
+        <option value="Orange County">Orange County</option>
+      </select>
+      <br/>
+      <p class="d-inline-block">Favorite Language: </p>
+      <select name="language" id="language" class="form-control">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="MySQL">MySQL</option>
+        <option value="Python">Python</option>
+        <option value="Mean">Mean</option>
+        <option value="C#">C#</option>
+        <option value=".Net">.Net</option>
+      </select>
+      <br/>
+      <p class="d-inline-block">Comment (Optional):</p>
+      <textarea name="comment" id="comment" cols="70" rows="5" class="form-control"></textarea>
+      <p>Best way to contact me:</p>
+      <input type="radio" id="contactEmail" name="contact" value="email">
+      <label for="contactEmail">Email</label>
+
+      <input type="radio" id="contactPhone" name="contact" value="phone">
+      <label for="contactPhone">Phone</label>
+
+      <input type="radio" id="contactMail" name="contact" value="mail">
+      <label for="contactMail">Mail</label>
+      <p>My operating systems:</p>
+      <input type="checkbox" id="windows" name="checkbox" value="Windows">
+      <label for="windows">Windows</label>
+      
+      <input type="checkbox" id="Linux" name="checkbox" value="Linux">
+      <label for="Linux">Linux</label>
+      
+      <input type="checkbox" id="Mac" name="checkbox" value="Mac">
+      <label for="Mac">Mac</label>
+
+      <input type="submit" name="submit" class="form-control">
+    </form>
+    </div>
+</body>
+</html>

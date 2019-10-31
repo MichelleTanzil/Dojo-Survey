@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dojo Survey Index</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <div>
+    <h3>Submitted Info: </h3>
+    <P>Name: {{name_on_template}}</P>
+    <P>Dojo Location: {{location_on_template}}</P>
+    <P>Favorite Language: {{language_on_template}}</P>
+    <P>Comment: {{comment_on_template}}</P>
+    <p>Best way to contact me: {{contact_on_template}}</p>
+    <p>My operating system/s: 
+    {%for value in checbox_values_on_template%}
+        {{value}}
+    {%endfor%}
+    </p>
+  </div>
+</body>
+</html>

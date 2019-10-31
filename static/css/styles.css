@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 20px auto;
+}
+
+.index{
+  margin: 50px; 
+  width: 700px; 
+  border: 2px solid black;
+  padding: 10px; 
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+textarea{
+  display: block;
+}
+
+input[type='submit']{
+  margin: 5px; 
+  padding: 2px; 
+}
+
